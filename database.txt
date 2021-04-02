@@ -1,0 +1,32 @@
+create table costumer(Name varchar(40),Mobile number(10),Password varchar(25),Email varchar(50));
+create table allitems(ItemNo varchar(50),Name varchar(50),category varchar(50),subcategory varchar(50),description varchar(250),photo varchar(50),price number,fastdelivery varchar (50),Avaliableinstore varchar(50),discount number);
+insert into allitems values('1','signingring','ring','goldring','Mensgold ringss are mesured in karat purity and are most frequently seen in 10k gold,14k gold,and 18k gold varieties','img5.jpg',45000,'yes','yes till 2days',10);
+insert into allitems values('2','signingring','ring','diamondring','diamond are very precious','img3.jpg',76000,'yes','yes',20);
+insert into allitems values('3','signingring','ring','diamondring','diamond are very precious','img17.jpg',76000,'yes','yes',20);
+insert into allitems values('4','signingring','ring','diamondring','diamond are very precious','img18.jpg',76000,'yes','yes',10);
+insert into allitems values('5','signingring','ring','diamondring','diamond are very precious','img19.jpg',76000,'no','no',20);
+insert into allitems values('6','signingring','ring','diamondring','diamond are very precious','img20.jpg',76000,'yes','yes',15);
+insert into allitems values('7','signingring','weddingring','diamond','for weddings','img21.jpg',76000,'yes','yes',10);
+insert into allitems values('8','signingring','weddingring','eternity','for weddings','img22.jpg',76000,'no','no',20);
+insert into allitems values('9','signingring','weddingring','whitegold','for weddings','img23.jpg',76000,'yes','yes',15);
+insert into allitems values('10','Necklace and Chains','chain','stylish',' very stylish','img24.jpg',760,'yes','yes',15);
+insert into allitems values('11','earrings','ring','diamond','stylish','img25.jpg',760,'yes','yes',15);
+insert into allitems values('12','earrings','ring','diamond','stylish','img26.jpg',43000,'yes','yes',2);
+insert into allitems values('13','earrings','ring','diamond','stylish','img27.jpg',76000,'yes','yes',10);
+insert into allitems values('14','earrings','ring','diamond','stylish','img28.jpg',34760,'yes','yes',5);
+insert into allitems values('15','earrings','ring','diamond','stylish','img29.jpg',76560,'yes','yes',5);
+insert into allitems values('16','earrings','ring','diamond','stylish','img30.jpg',71360,'yes','yes',5);
+insert into allitems values('17','pendants','pendants','stylish','stylish and middle price','img31.jpg',17360,'yes','yes',5);
+insert into allitems values('18','pendants','pendants','stylish','stylish and middle price','img32.jpg',22360,'yes','yes',5);
+insert into allitems values('19','pendants','pendants','stylish','stylish and middle price','img33.jpg',20360,'yes','yes',5);
+insert into allitems values('20','pendants','pendants','stylish','stylish and middle price','img34.jpg',18360,'yes','yes',5);
+insert into allitems values('21','pendants','pendants','stylish','stylish and middle price','img35.jpg',20360,'no','no',5);
+insert into allitems values('22','solitaires','rings','diamond','signing','img36.jpg',54360,'yes','yes',5);
+insert into allitems values('23','solitaires','pendants','diamond','stylish and precious','img37.jpg',60360,'yes','yes',15);
+insert into allitems values('24','solitaires','earrings','diamond','stylish and for wommens','img38.jpg',34360,'no','no',5);
+
+create table cart(Sno number(10),Userid varchar(25),Dateofpurchase date,Itemno varchar(50),price number);
+create sequence tranzectionno start with 1 increment by 1 minvalue 1 maxvalue 100000;
+
+create table Tranzection(tranzectionno varchar(40),Name varchar (50),Bankaccountno number,Bankname varchar(50),Ifsccode varchar(25),Amount number,Dateofpurchase date);
+create table payfor( Name varchar (50),tranzectionno varchar(40),Itemno varchar(50),price number,Dateofpurchase date);
